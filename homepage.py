@@ -18,11 +18,27 @@ class HomePage():
         self.app_name = Label(text = 'Math Minds', fg=ORANGE_COLOUR, bg=YELLOW_COLOUR, font=("Segoe UI Black", 35))
         self.app_name.place(x=115,y=20)
 
-        self.mcq_button = Button(height=20,width=59, text = 'here')
-        self.mcq_button.place(200,200)
+        self.mcq_button = Button(text='mcq', command=self.start_mcq)
+        self.mcq_button.place(x=200,y=200)
 
+        self.mcq_button = Button(text='tf', command=self.start_tf)
+        self.mcq_button.place(x=200,y=250)
+
+        self.mcq_button = Button(text='scoreboard', command=self.start_scoreboard)
+        self.mcq_button.place(x=200,y=300)
 
         self.homepage_window.mainloop()
 
+    def start_mcq(self):
+        self.homepage_window.destroy()
+        print('mcq has started')
+    def start_tf(self):
+        self.homepage_window.destroy()
+        print('tf has started')
+    def start_scoreboard(self):
+        self.homepage_window.destroy()
+        print('scoreboard has started')
+
 
 homepage = HomePage()
+
