@@ -1,5 +1,5 @@
 import mcq_quiz
-import tf_quiz
+import tf_quiz 
 import scoreboard
 from tkinter import *
 
@@ -21,11 +21,11 @@ class HomePage():
         self.mcq_button = Button(text='mcq', command=self.start_mcq)
         self.mcq_button.place(x=200,y=200)
 
-        self.mcq_button = Button(text='tf', command=self.start_tf)
-        self.mcq_button.place(x=200,y=250)
+        self.tf_button = Button(text='tf', command=self.start_tf)
+        self.tf_button.place(x=200,y=250)
 
-        self.mcq_button = Button(text='scoreboard', command=self.start_scoreboard)
-        self.mcq_button.place(x=200,y=300)
+        self.scoreboard_button = Button(text='scoreboard', command=self.start_scoreboard)
+        self.scoreboard_button.place(x=200,y=300)
 
         self.homepage_window.mainloop()
 
@@ -34,6 +34,7 @@ class HomePage():
         print('mcq has started')
     def start_tf(self):
         self.homepage_window.destroy()
+        self.tf_quiz = tf_quiz.TF_Quiz()
         print('tf has started')
     def start_scoreboard(self):
         self.homepage_window.destroy()
